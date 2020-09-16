@@ -1,0 +1,170 @@
+1) UserRegisteration
+--------------------------
+create table userRegisteration
+(
+id serial PRIMARY KEY,
+	aadharNo varchar(11),
+	fName varchar(15),
+	lName varchar(15),
+	email varchar(20),
+	passwrd varchar(15) NOT NULL,
+	education varchar(10),
+	techSkills varchar(10),
+	dob varchar(10),
+	mobNumber varchar(10),
+	gender varchar(7),
+	userCity varchar(20),
+	userState varchar(20),
+	userCountry varchar(20),
+	pinCode varchar(20)
+);
+
+UpdateQuery for user registertion
+-------------------------------
+update userRegisteration set fName='"+fName+"', lName='"+lName+"', mobNumber='"+mobNumber+"',
+email='"+email+"', eduction='"+eduction+"', techSkills='"+techSkills+"', dob='"+dob+"',
+gender='"+gender+"', userCity='"+userCity+"', userState='"+userState+"',
+userCountry='"+userCountry+"', pinCode='"+pinCode+"' where id ='"+id+"';
+--------------------------------
+
+
+2)UserLogin
+----------------------------------
+create table login
+(
+id serial primary key,
+	username varchar(30),
+	passwrd varchar(30),
+	status varchar(30),
+	uRole varchar(10)
+);
+
+------------------------------------
+3)AddInterview
+------------------------------------
+create table interview
+(
+id serial primary key,
+	cmpyName varchar(50),
+	techSkills varchar(100),
+	experience varchar (20),
+	inLocation varchar (30),
+);
+
+InsertInterview
+------------------------
+
+insert into interview (cmpyName, techSkills, experience, inLocation)
+values ('"+cmpyName+"', '"+techSkills+"', '"+experience+"', 
+
+Based On Skill
+-----------------------------------
+select * from interview where techSkills = '"+techSkills+"';
+
+
+
+
+-----------------------------------------------
+-----------------------------------------------
+Courier DataBase
+-------------------------------------------
+
+1) UserRegisteration
+---------------------------------------------
+create table userRegisteration (id serial primary key, name varchar(30), dob varchar(10),
+gender varchar(10), email varchar(50), 
+mobileNo varchar(20), city varchar(30), address varchar(100));
+
+2) Login Table
+-------------------------------------------------
+-----------------------------------------------
+create table login
+(
+id serial primary key,
+	username varchar(30),
+	passwrd varchar(30),
+	status varchar(30),
+	uRole varchar(10)
+);
+---------------------------------------------------------------
+------------------------------------------------------------------
+
+3)  PlaceCourier
+----------------------------------------------
+
+
+create table placeCourier (
+id serial primary key,
+	username varchar(30),
+	senderName varchar(30),
+	senderMobNo varchar(10),
+	senderCity varchar(30),
+	senderAddress varchar(100),
+	recName varchar(30),
+	recMobile varchar(10),
+	recCity varchar(30),
+	recAddrress varchar(50),
+	dateTime varchar(100),
+	ShipmentType varchar(20),
+	weight varchar(15),
+	qtny varchar(15),
+	cstatus varchar(15)
+
+
+
+);
+
+
+
+
+
+
+_---------------------------------------------------------------student--------
+
+
+create table student (
+id serial primary key,
+	name varchar(30),
+name varchar(30),password varchar(30),degree varchar(30),year varchar(30));
+
+
+
+create table question  (
+id serial primary key,
+name varchar(30),visible varchar(30),answer varchar(30),date varchar(30));
+
+
+
+
+-----------------------------------------docter-------------------------------
+
+
+
+UserRegisteration
+--------------------------
+create table userReg(
+id serial primary key,
+	name varchar(30),
+	mobNo varchar(10),
+	email varchar(30),
+	address varchar(100)
+);
+Login
+-------------------------------
+
+create table login (
+id serial primary key,
+	userName varchar(30),
+	passwrd varchar(15),
+	role varchar(30),
+	status varchar(30)
+);
+
+
+
+
+
+
+
+
+
